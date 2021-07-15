@@ -1,0 +1,98 @@
+<div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quintessa Trip</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-6">Payment</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <div class="card ">
+                <div class="card-header">
+                    <!-- End -->
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+                        <!-- credit card info-->
+                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                            <form role="form" onsubmit="event.preventDefault()">
+                                <div class="form-group">
+                                    <label for="username">
+                                        <h6>Card Owner</h6>
+                                    </label>
+                                    <input type="text" name="username" id="name" placeholder="Card Owner Name" required class="form-control" required> </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">
+                                        <h6>Card number</h6>
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="number" name="cardNumber" id="number" placeholder="Valid card number" class="form-control " required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text text-muted">
+                                                <i class="fab fa-cc-visa mx-1"></i>
+                                                <i class="fab fa-cc-mastercard mx-1"></i>
+                                                <i class="fab fa-cc-amex mx-1"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label>
+                                                <span class="hidden-xs">
+                                                    <h6>Expiration Date</h6>
+                                                </span>
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="number" placeholder="MM" name="" class="form-control" id="expMonth" required>
+                                                <input type="number" placeholder="YY" name="" class="form-control" id="expYear" required> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-4">
+                                            <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                <h6>CVV
+                                                    <i class="fa fa-question-circle d-inline"></i>
+                                                </h6>
+                                            </label>
+                                            <input type="password" required class="form-control" id="cvvNo"> </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="subscribe btn btn-primary btn-block shadow-sm" id="cardPayBtn"> Confirm Payment </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../service/PaymentManager.js"></script>
+    <script src="../../service/StorageManager.js"></script>
+    <script src="../../validator/PaymentValidator.js"></script>
+    <script src="../../assets/js/payment.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar').load('../user/navbar.html');
+        });
+    </script>

@@ -1,0 +1,26 @@
+<!-- <h1 class="display-4">Admin Login</h1>
+<form>
+    <input type="email" name="email" id="email" placeholder="Email" required autofocus>
+    <br>
+    <br>
+    
+    <p id="errorText" class="text-danger"></p>
+    <button>Login</button>
+</form> -->
+
+<!-- (submit)="authenticate()" -->
+
+  
+<h3>Admin Login</h3>
+
+<form (submit)="login()">
+  <label for="email"></label>
+  <input type="email" name="email" id="email" placeholder="Enter email"  autofocus required [(ngModel)]="email" required>
+  <br>
+  <br>
+  <input type="password" name="password" id="password" placeholder="Password" required [(ngModel)]="password" required>
+  <br>
+  <br>
+  <button class="btn btn-success">Submit</button>
+  &nbsp;<button type="reset" class="btn btn-danger">Reset</button>
+</form>

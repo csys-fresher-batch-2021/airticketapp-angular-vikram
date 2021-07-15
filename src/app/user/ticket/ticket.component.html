@@ -1,0 +1,125 @@
+<div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quintessa Trip</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<header>
+    <h1 class="display-4 text-center">Ticket</h1>
+</header>
+<main class="content">
+    <h5>Flight Details</h5>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Ticket information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flight No</td>
+                <td>
+                    <span id="flightId"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Airline</td>
+                <td>
+                    <span id="airline"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>
+                    <span id="date"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>origin</td>
+                <td>
+                    <span id="origin"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>destiny</td>
+                <td>
+                    <span id="destiny"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Departure Time</td>
+                <td>
+                    <span id="departTime"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Arrival Time</td>
+                <td>
+                    <span id="arrivalTime"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Seat Type</td>
+                <td>
+                    <span id="seatType"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>No of tickets</td>
+                <td>
+                    <span id="noOfTickets"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Adult</td>
+                <td>
+                    <span id="adult"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Children</td>
+                <td>
+                    <span id="children"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Infant</td>
+                <td>
+                    <span id="infant"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <span id="price"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="payBtn" class="btn btn-primary">Pay</button>
+    <button id="printBtn" class="btn btn-warning">Print</button>
+    <div id="footer">
+        <small>Contact us.
+            <a href="mailto:">support@quintessatrip.inc</a>
+        </small>
+    </div>
+</main>
+<script src="../../service/StorageManager.js"></script>
+<script src="../../service/FlightManager.js"></script>
+<script src="../../assets/js/ticket.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#navbar').load('../user/navbar.html');
+    });
+</script>

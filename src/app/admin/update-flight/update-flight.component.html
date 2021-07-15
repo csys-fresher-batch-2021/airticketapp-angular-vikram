@@ -1,0 +1,76 @@
+<!-- <p>update-flight works!</p> -->
+<nav class="sidebar">
+    <div class="text-center">
+        <img src="../../assets/img/admin.png" class="img-thumbnail" alt="..." width="35%">
+    </div>
+    <a routerLink="/admin/dashboard">Dashboard</a>
+    <a routerLink="/admin/schedule" class="active">Schedule</a>
+    <a routerLink="/admin/ticket">Tickets</a>
+    <a routerLink="/home">Log out</a>
+</nav>
+
+<header>
+    <h1 class="display-4 text-center">Schedule Maintenance</h1>
+</header>
+
+<main class="content">
+    <h5>Update schedule</h5>
+    <form #updateForm="ngForm" *ngIf="flight != null" (submit)="onSubmit()">
+        <div class="form-group row">
+            <label class="col-2" for="flightNo">Flight No: </label>
+            <input class="col-3" id="flightNo" name="flightNo" type="text" [(ngModel)]="flight.flight_no">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="airline">Airline: </label>
+            <input class="col-3" id="airline" name="airline" type="text" [(ngModel)]="flight.airline">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="date">Date: </label>
+            <input class="col-3" id="flightDate" name="flightDate" type="date" [(ngModel)]="flight.flight_date">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="origin">origin: </label>
+            <input class="col-3" id="origin" name="origin" type="text" [(ngModel)]="flight.origin">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="destiny">Destiny: </label>
+            <input class="col-3" id="destiny" type="text" name="destiny" [(ngModel)]="flight.destiny">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="departTime">Depart Time: </label>
+            <input class="col-3" id="departTime" type="text" name="departTime" [(ngModel)]="flight.depart_time">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="arrivalTime">Arrival Time: </label>
+            <input class="col-3" id="arrivalTime" type="text" name="arrivalTime" [(ngModel)]="flight.arrival_time">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="economy">Economy: </label>
+            <input class="col-3" id="economy" type="number" name="economy" [(ngModel)]="flight.economy">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="business">Business: </label>
+            <input class="col-3" id="business" type="number" name="business" [(ngModel)]="flight.business">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="economyPrice">Economy Price</label>
+            <input class="col-3" id="economyPrice" type="number" name="economyPrice" [(ngModel)]="flight.economy_price">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label class="col-2" for="businessPrice">Business Price</label>
+            <input class="col-3" id="businessPrice" type="number" name="businessPrice" [(ngModel)]="flight.business_price">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+</main>

@@ -1,0 +1,55 @@
+<nav class="sidebar">
+    <div class="text-center">
+        <img src="../../assets/img/admin.png" class="img-thumbnail" alt="..." width="35%">
+    </div>
+    <a routerLink="/admin/dashboard">Dashboard</a>
+    <a routerLink="/admin/schedule" class="active">Schedule</a>
+    <a routerLink="/admin/ticket">Tickets</a>
+    <a routerLink="/home">Log out</a>
+</nav>
+
+<header>
+    <h1 class="display-4 text-center">Schedule Maintenance</h1>
+</header>
+
+<main class="content">
+    <p>Welcome to Quintessa trip</p>
+    <section class="row">
+        <article class="col-4">
+            <div id="cardAddSchedule">
+                <div class="card" style="width: 18rem;">
+                    <img class="img-thumbnail" src="../../assets/img/schedulejpg.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">New Schedule</h5>
+                        <p class="card-text">Add new schedule for airlines.</p>
+                        <a routerLink="/admin/addschedule" class="btn btn-danger">Add</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col-4">
+            <div id="cardViewSchedule">
+                <div class="card" style="width: 18rem;">
+                    <img class="img-thumbnail" src="../../assets/img/view.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">List Schedule</h5>
+                        <p class="card-text">View or modify the schedule</p>
+                        <a routerLink="/admin/flights" class="btn btn-danger">View</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col-4">
+            <div id="goToDashboard">
+                <div class="card" style="width: 18rem;">
+                    <img class="img-thumbnail" src="../../assets/img/dashboard.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Dashboard Panel</h5>
+                        <p class="card-text">Go to dashboard.</p>
+                        <a routerLink="/admin/dashboard" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>

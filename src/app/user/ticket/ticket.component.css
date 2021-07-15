@@ -1,0 +1,9 @@
+main.content {
+    background-image: linear-gradient(white, lightgray);
+    margin-left: 50px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+@media screen and (max-width: 700px) {
+    main.content {margin-left: 0;}
+}

@@ -1,0 +1,97 @@
+<!-- <p>view-flight works! {{ flightId }}</p> -->
+<nav class="sidebar">
+    <div class="text-center">
+        <img src="../../assets/img/admin.png" class="img-thumbnail" alt="..." width="35%">
+    </div>
+    <a routerLink="/admin/dashboard">Dashboard</a>
+    <a routerLink="/admin/schedule" class="active">Schedule</a>
+    <a routerLink="/admin/ticket">Tickets</a>
+    <a routerLink="/home">Log out</a>
+</nav>
+
+<header>
+    <h1 class="display-4 text-center">Flight Data Management</h1>
+</header>
+<!-- {{ flight | json}} -->
+<main class="content">
+    <h5>Flight Details</h5>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Flight</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="flight != null">
+            <tr>
+                <td>Flight No</td>
+                <td>
+                    <span id="flightNo">{{ flight.flight_no }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Airline</td>
+                <td>
+                    <span id="airline">{{ flight.airline }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>
+                    <span id="date">{{ flight.flight_date.substr(0, 10) }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>origin</td>
+                <td>
+                    <span id="origin">{{ flight.origin }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>destiny</td>
+                <td>
+                    <span id="destiny">{{ flight.destiny }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Departure Time</td>
+                <td>
+                    <span id="departTime">{{ flight.depart_time }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Arrival Time</td>
+                <td>
+                    <span id="arrivalTime">{{ flight.arrival_time }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Economy</td>
+                <td>
+                    <span id="economy">{{ flight.economy }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Business</td>
+                <td>
+                    <span id="business">{{ flight.business }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Economy Price</td>
+                <td>
+                    <span id="economyPrice">{{ flight.economy_price }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Business Price</td>
+                <td>
+                    <span id="businessPrice">{{ flight.business_price }}</span>
+                </td>
+            </tr>
+            <button routerLink="/admin/update/{{ flight.id }}" id="updateBtn" class="btn btn-primary">Update</button>
+            <button id="deleteBtn" class="btn btn-danger" (click)="delete()">Delete</button>
+        </tbody>
+    </table>
+   
+</main>

@@ -1,0 +1,73 @@
+<div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quintessa Trip</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="heading">
+    <h1 class="heading-one">Booking Page</h1>
+</div>
+<div class="container">
+    <form action="" id="myForm">
+        <div class="flightId">
+            <label class="form-label" for="flightid">Flight Id</label>
+            <input class="form-control" type="text" name="flightid" id="flightid">
+        </div>
+        <div class="noOfTickets">
+            <label class="form-label" for="mySelect">No of Tickets:</label>
+            <select class="form-control" name="mySelect" id="mySelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="seatType">
+            <label class="form-label" for="seatType">Seat Type :</label>
+            <br>
+            <input type="radio" id="seatType" name="seatType" value="Economy">
+            <label class="form-label" for="economy">Economy</label>
+            <input type="radio" id="seatType" name="seatType" value="Business">
+            <label class="form-label" for="business">Business</label>
+        </div>
+        <div class="adults">
+            <label class="form-label" for="noOfAdults">Adults(13+ years) :</label>
+            <input class="form-control" type="number" name="noOfAdults" id="noOfAdults" value="0">
+        </div>
+        <div class="children">
+            <label class="form-label" for="noOfChildren">Children(2-13 years) :</label>
+            <input class="form-control" type="number" name="noOfChildren" id="noOfChildren" value="0">
+        </div>
+        <div class="infants">
+            <label class="form-label" for="noOfInfants">Infants(under 2) :</label>
+            <input class="form-control" type="number" name="noOfInfants" id="noOfInfants" value="0">
+        </div>
+        <div class="submit-btn">
+            <button class="btn btn-danger" type="submit" id="bookButton" value="submit">Book</button>
+        </div>
+    </form>
+</div>
+
+<script src="../../service/StorageManager.js"></script>
+<script src="../../service/FlightManager.js"></script>
+<script src="../../service/TicketManager.js"></script>
+<script src="../../service/PriceEstimator.js"></script>
+<script src="../../validator/Validator.js"></script>
+<script src="../../assets/js/Booking.js "></script>
+
+<script>
+    $(document).ready(function () {
+        $('#navbar').load('../user/navbar.html');
+    });
+</script>
